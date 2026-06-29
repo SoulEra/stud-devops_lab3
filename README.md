@@ -1,7 +1,14 @@
 #stud-devops_lab3
-Плейбук устанавливает на хосты пакет nmap и сканирует хосты из targets.txt на доступность порта 80
+Плейбук устанавливает на nmap и сканирует цели из targets.txt на доступность 80 порта
 
-Запуск плейбука
+Установка ansible(если по каким-то причинам не установлен):
+```
+sudo apt update
+```
+```
+sudo apt install ansible -y
+```
+Запуск плейбука с вводом пароля:
 ```
 ansible-playbook -i inventory.ini scan.yml --ask-become-pass
 ```
